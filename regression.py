@@ -137,14 +137,14 @@ min99 = prediction*0.52 if channel == 0 else prediction*0.11
 max99 = prediction*1.78 if channel == 0 else prediction*1.73
 confi = st.selectbox('Select confidence ', options=['68.2%','86.6%','95%','99.7%'])
 if confi == '68.2%':
-    st.subheader('Predicted Sell-in price of {} is {} '.format(name, np.round(prediction,2))
-    st.write('Range of Sell-in price: {} - {}'.format(np.round(min7,2), np.round(max7,2)) 
+    st.subheader('Predicted Sell-in price of {} is {} '.format(name, np.round(prediction,2)))
+    st.write('Range of Sell-in price: {} - {}'.format(np.round(min7,2), np.round(max7,2)))
 elif confi == '86.6%':
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2))
-    st.write('Range of Sell-in price: {} - {}'.format(np.round(min8,2), np.round(max8,2)) 
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.write('Range of Sell-in price: {} - {}'.format(np.round(min8,2), np.round(max8,2)))
 elif confi == '95%':
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2))
-    st.write('Range of Sell-in price: {} - {}'.format(np.round(min9,2), np.round(max9,2)) 
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.write('Range of Sell-in price: {} - {}'.format(np.round(min9,2), np.round(max9,2)))
 else:
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2))
-    st.write('Range of Sell-in price: {} - {}'.format(np.round(min99,2), np.round(max99,2)) 
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.write('Range of Sell-in price: {} - {}'.format(np.round(min99,2), np.round(max99,2))) 
