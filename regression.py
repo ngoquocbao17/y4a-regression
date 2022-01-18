@@ -127,24 +127,25 @@ dim = st.number_input('Insert Dim_Weight (cm3)')
 st.subheader('Model Result')
 new_data_1 = [[retail, dim, weight, channel]]
 prediction = model.predict(new_data_1)
-min7 = prediction*0.94 if channel == 0 else prediction*0.65
-max7 = prediction*1.36 if channel == 0 else prediction*1.19
-min8 = prediction*0.835 if channel == 0 else prediction*0.515
-max8 = prediction*1.465 if channel == 0 else prediction*1.325
-min9 = prediction*0.73 if channel == 0 else prediction*0.38
-max9 = prediction*1.57 if channel == 0 else prediction*1.46
-min99 = prediction*0.52 if channel == 0 else prediction*0.11
-max99 = prediction*1.78 if channel == 0 else prediction*1.73
+min7 = prediction*0.94 if channel == 0 else prediction*0.8
+max7 = prediction*1.35 if channel == 0 else prediction*1.34
+min8 = prediction*0.835 if channel == 0 else prediction*0.665
+max8 = prediction*1.455 if channel == 0 else prediction*1.475
+min9 = prediction*0.73 if channel == 0 else prediction*0.53
+max9 = prediction*1.56 if channel == 0 else prediction*1.61
+min99 = prediction*0.52 if channel == 0 else prediction*0.26
+max99 = prediction*1.77 if channel == 0 else prediction*1.88
 confi = st.selectbox('Select confidence ', options=['68.2%','86.6%','95%','99.7%'])
 if confi == '68.2%':
-    st.subheader('Predicted Sell-in price of {} is {} '.format(name, np.round(prediction,2)))
+    st.subheader('Predicted Sell-in price of {} is {} '.format(name, np.round(prediction*1.14 if channel == 0 else prediction*1.07,2)))
     st.write('Range of Sell-in price: {} - {}'.format(np.round(min7,2), np.round(max7,2)))
 elif confi == '86.6%':
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction*1.14 if channel == 0 else prediction*1.07,2)))
     st.write('Range of Sell-in price: {} - {}'.format(np.round(min8,2), np.round(max8,2)))
 elif confi == '95%':
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction*1.14 if channel == 0 else prediction*1.07,2)))
     st.write('Range of Sell-in price: {} - {}'.format(np.round(min9,2), np.round(max9,2)))
 else:
-    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction,2)))
+    st.subheader('Predicted Sell-in price of {} is {}'.format(name, np.round(prediction*1.14 if channel == 0 else prediction*1.07,2)))
     st.write('Range of Sell-in price: {} - {}'.format(np.round(min99,2), np.round(max99,2))) 
+
