@@ -59,8 +59,7 @@ mae = mean_absolute_error(predict_df['y_test'], predict_df['y_predict'])
 st.image("https://user-images.githubusercontent.com/67365937/149266024-d200c0e5-1d61-4f5d-b49d-78865a27e8e5.png",width=250)
 st.write('# Supply Chain Planning Team')
 st.write("### Sell-in Price Prediction Project")
-st.write('# Supply Chain Planning Team')
-st.write("### Sell-in Price Prediction Project")
+
 
 
 
